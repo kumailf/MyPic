@@ -1,0 +1,17 @@
+# assign issues to owners automatically
+assign:
+  issues: enabled # or disabled
+  pull_requests: enabled # or disabled
+  # assign strategy, both issues and pull requests follow the same strategy
+  strategy:
+    random
+    # round-robin
+    # daily-shift-based
+  schedule:
+    '*/1 * * * *'
+  # assignees
+  assignees:
+    - del-zhenwu
+# assign reviewers pull requests to module owners automatically
+modules:
+  /build/logs/ @doctocat
